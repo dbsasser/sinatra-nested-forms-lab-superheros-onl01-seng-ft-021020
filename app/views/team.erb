@@ -1,15 +1,9 @@
 <h1><%= @team.name %></h2>
 <h2>Teams Motto: <%= @team.motto %></h2>
 <br>
-#I should use iteration here
-<h2>Hero Name: <%= @members[0].name %></h2>
-<h3>Hero Power: <%= @members[0].power %></h3>
-<h3>Hero Biography: <%=@members[0].bio %></h3>
+<% @members.each do |member| %>
+<h2>Hero Name: <%= member.name %></h2>
+<h3>Hero Power: <%= member.power %></h3>
+<h3>Hero Biography: <%= member.bio %></h3>
 <br>
-<h2>Hero Name: <%= @members[1].name %></h2>
-<h3>Hero Power: <%= @members[1].power %></h3>
-<h3>Hero Biography: <%=@members[1].bio %></h3>
-<br>
-<h2>Hero Name: <%= @members[2].name %></h2>
-<h3>Hero Power: <%= @members[2].power %></h3>
-<h3>Hero Biography: <%=@members[2].bio %></h3>
+<% end %>
